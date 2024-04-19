@@ -5,11 +5,28 @@ import java.util.ArrayList;
 
 class OptionsPanel extends JPanel {
     public OptionsPanel(ArrayList<String> list) {
-        setLayout(new GridLayout(4, 1));
-        addButton("A");
-        addButton("B");
-        addButton("C");
-        addButton("D");
+        GridBagLayout layout = new GridBagLayout();
+        setLayout(layout);
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.weightx = 0.25;
+        gbc.weighty = 0.25;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(10, 10, 10, 10);
+
+        int i = 1;
+        for (String option : list) {
+            addButton(option, gbc);
+            gbc.gridx++;
+            if (i % 2 == 0) {
+                gbc.gridy++;
+                gbc.gridx = 0;
+            }
+            i++;
+        }
+
     }
 
     public void addButtonListener(ActionListener listener) {
@@ -20,8 +37,10 @@ class OptionsPanel extends JPanel {
         }
     }
 
-    public void addButton(String text) {
+    public void addButton(String text, GridBagConstraints gbc) {
         JButton button = new JButton(text);
-        add(button);
+        button.setPreferredSize(new Dimension(300, 150));
+        button.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        add(button, gbc);
     }
 }

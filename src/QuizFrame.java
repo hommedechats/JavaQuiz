@@ -7,12 +7,23 @@ import java.util.ArrayList;
 class QuizFrame extends JFrame {
     public QuizFrame(String title) {
         super(title);
-        setLayout(new BorderLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        setLayout(new GridBagLayout());
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
 
         QuestionPanel questionPanel = new QuestionPanel("What is the capital of France?");
-        add(questionPanel, BorderLayout.NORTH);
+        add(questionPanel, gbc);
 
         ArrayList<String> opa = new ArrayList<>();
+        opa.add("Paris");
+        opa.add("London");
+        opa.add("Berlin");
+        opa.add("Madrid");
         OptionsPanel optionsPanel = new OptionsPanel(opa);
 
         optionsPanel.addButtonListener(new ActionListener() {
@@ -25,6 +36,7 @@ class QuizFrame extends JFrame {
                 System.out.println("Button " + option + " clicked.");
             }
         });
-        add(optionsPanel, BorderLayout.CENTER);
+        gbc.gridy = 1;
+        add(optionsPanel, gbc);
     }
 }
