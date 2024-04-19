@@ -3,7 +3,8 @@ import java.awt.*;
 
 class QuestionPanel extends JPanel {
     public QuestionPanel(String question) {
-        setLayout(new GridBagLayout()); //centering
+        GridBagLayout layout = new GridBagLayout();
+        setLayout(layout); //centering
         JLabel questionLabel = new JLabel(question);
         questionLabel.setFont(new Font("Arial", Font.BOLD, 20));
         add(questionLabel);

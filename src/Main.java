@@ -5,9 +5,9 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             QuizFrame frame = new QuizFrame("Quiz Game");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(600, 900);
+            frame.setResizable(false);
+            frame.setSize(1300, 700);
             frame.setVisible(true);
-
         });
     }
 }
