@@ -4,9 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-class QuizFrame extends JFrame {
+class QuizFrame extends JPanel {
     public QuizFrame(String title) {
-        super(title);
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
         gbc.fill = GridBagConstraints.HORIZONTAL;
