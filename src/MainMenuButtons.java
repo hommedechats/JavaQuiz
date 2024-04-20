@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 import java.awt.*;
@@ -16,6 +15,7 @@ public class MainMenuButtons {
     MainMenuButtons(){
 
         startGameButton.setPreferredSize(new Dimension(500, 150));
+        startGameButton.setBorder(new LineBorder(Color.BLACK, 2, true));
         startGameButton.setBackground(new Color(255, 255, 255));
 
 

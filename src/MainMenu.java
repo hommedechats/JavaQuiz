@@ -1,20 +1,26 @@
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-import javax.swing.*;
 import javax.swing.JPanel;
 
 public class MainMenu extends JPanel {
     public MainMenu(){
-        JLabel mainMenuLabel = new JLabel("Main Menu\n QUIZ GAME");
+        MainMenuLabel mainMenuLabel = new MainMenuLabel("Main menu");
         MainMenuButtons buttons = new MainMenuButtons();
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.CENTER;
-        add(mainMenuLabel, gbc);
 
+        gbc.insets = new java.awt.Insets(10, 10, 10, 10);
+        gbc.gridy = 0;
+        add(mainMenuLabel, gbc);
+        gbc.gridy++;
+        add(buttons.startGameButton, gbc);
+        gbc.gridy++;
+        add(buttons.leaderboardButton, gbc);
+        
+        
+        
+        
         buttons.startGameButton.addActionListener(e -> {
             removeAll();
             add(buttons.backButton);
@@ -32,15 +38,9 @@ public class MainMenu extends JPanel {
         buttons.backButton.addActionListener(e -> {
             removeAll();
             add(new MainMenu()); // klausimas ar gerai taip bet for testing works
-            // add(buttons.startGameButton);
-            // add(buttons.leaderboardButton);
             revalidate();
             repaint();
         });
-        gbc.gridy++;
-        add(buttons.startGameButton, gbc);
-        gbc.gridy++;
-        add(buttons.leaderboardButton, gbc);
     }
 
 }
