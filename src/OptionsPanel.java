@@ -39,8 +39,11 @@ class OptionsPanel extends JPanel {
 
     public void addButton(String text, GridBagConstraints gbc) {
         JButton button = new JButton(text);
+        // button.setFont(new Font("Arial", Font.PLAIN, 25));
+        button.setBackground(new Color(255, 255, 255));
         button.setPreferredSize(new Dimension(300, 150));
-        button.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 5, true));
         add(button, gbc);
     }
+
 }
