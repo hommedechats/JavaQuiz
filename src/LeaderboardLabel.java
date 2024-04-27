@@ -11,7 +11,7 @@ public class LeaderboardLabel extends JPanel {
         JLabel leaderboardLabel = new JLabel("Leaderboard");
         leaderboardLabel.setHorizontalAlignment(SwingConstants.CENTER);
         leaderboardLabel.setFont(new Font("Arial", Font.BOLD, 50));
-        setPreferredSize(new Dimension(500, 200));
+        setPreferredSize(new Dimension(500, 100));
         add(leaderboardLabel);
     }
 

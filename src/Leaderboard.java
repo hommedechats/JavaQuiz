@@ -15,7 +15,7 @@ public class Leaderboard extends JPanel {
         setSize(new Dimension(800, 400));
         setBorder(new LineBorder(java.awt.Color.BLACK, 2, true));
         
-        JLabel main_Label = new JLabel("T|E|S|T");
+        JLabel main_Label = new JLabel("TEST");
         main_Label.setFont(new Font("Arial", Font.BOLD, 15));
         main_Label.setSize(new Dimension(800, 50));
         add(main_Label);
@@ -28,7 +28,7 @@ public class Leaderboard extends JPanel {
 
     private void addPlayerLabel(String player){
         JLabel playerLabel = new JLabel(player);
-        playerLabel.setFont(new Font("Arial", Font.BOLD, 15));
+        playerLabel.setFont(new Font("Arial", Font.BOLD, 30));
         playerLabel.setHorizontalAlignment(JLabel.LEFT);
         playerLabel.setSize(new Dimension(800, 50));
         add(playerLabel);
