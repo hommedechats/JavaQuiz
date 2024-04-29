@@ -8,7 +8,7 @@ class QuestionPanel extends JPanel {
         GridBagLayout layout = new GridBagLayout();
         setLayout(layout); //centering
         JLabel questionLabel = new JLabel(question);
-        questionLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        questionLabel.setFont(new Font("Arial", Font.BOLD, 40));
         questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
         add(questionLabel);
         setPreferredSize(new Dimension(400, 200));

@@ -10,8 +10,8 @@ class QuizFrame extends JPanel {
         setLayout(new GridBagLayout());
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.NORTH;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
+        gbc.weightx = 0.5;
+        gbc.weighty = 0.5;
         gbc.gridx = 0;
         gbc.gridy = 0;
 

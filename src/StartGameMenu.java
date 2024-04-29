@@ -1,9 +1,6 @@
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class StartGameMenu extends JPanel {
@@ -29,9 +26,29 @@ public class StartGameMenu extends JPanel {
         gbc.anchor = GridBagConstraints.LAST_LINE_START;
         add(backButton, gbc);
 
+
+            
         backButton.addBackButtonListener(e -> {
             removeAll();
             add(new MainMenu());
+            revalidate();
+            repaint();
+        });
+        difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
+            removeAll();
+            add(new QuizFrame("Quiz Game"));
+            revalidate();
+            repaint();
+        });
+        difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
+            removeAll();
+            add(new QuizFrame("Quiz Game"));
+            revalidate();
+            repaint();
+        });
+        difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
+            removeAll();
+            add(new QuizFrame("Quiz Game"));
             revalidate();
             repaint();
         });

@@ -16,7 +16,6 @@ public class DifficultyButtonsPanel extends JPanel{
         add(buttons.easyButton, gbc);
         add(buttons.mediumButton, gbc);
         add(buttons.hardButton, gbc);
-
     }
 
 }
