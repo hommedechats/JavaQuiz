@@ -4,7 +4,9 @@ import java.awt.GridBagLayout;
 import javax.swing.JPanel;
 
 public class MainMenu extends JPanel {
-    
+
+    static private int difficulty = 0;
+
     public MainMenu(){
         MainMenuLabel mainMenuLabel = new MainMenuLabel("Main menu");
         MainMenuButtons buttons = new MainMenuButtons();
@@ -31,6 +33,13 @@ public class MainMenu extends JPanel {
             revalidate();
             repaint();
         });
+    }
+
+    static public int getDifficulty() {
+        return difficulty;
+    }
+    static public void setDifficulty(int newDifficulty) {
+        difficulty = newDifficulty;
     }
 
 }

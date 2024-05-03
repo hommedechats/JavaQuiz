@@ -25,9 +25,7 @@ public class StartGameMenu extends JPanel {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.LAST_LINE_START;
         add(backButton, gbc);
-
-
-            
+        
         backButton.addBackButtonListener(e -> {
             removeAll();
             add(new MainMenu());
@@ -35,22 +33,25 @@ public class StartGameMenu extends JPanel {
             repaint();
         });
         difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
-            removeAll();
-            add(new QuizFrame("Quiz Game"));
-            revalidate();
-            repaint();
+            MainMenu.setDifficulty(1);
+            // removeAll();
+            // add(new QuizFrame("Quiz Game"));
+            // revalidate();
+            // repaint();
         });
         difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
-            removeAll();
-            add(new QuizFrame("Quiz Game"));
-            revalidate();
-            repaint();
+            MainMenu.setDifficulty(2);
+            // removeAll();
+            // add(new QuizFrame("Quiz Game"));
+            // revalidate();
+            // repaint();
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
-            removeAll();
-            add(new QuizFrame("Quiz Game"));
-            revalidate();
-            repaint();
+            MainMenu.setDifficulty(3);
+            // removeAll();
+            // add(new QuizFrame("Quiz Game"));
+            // revalidate();
+            // repaint();
         });
     }
 }
