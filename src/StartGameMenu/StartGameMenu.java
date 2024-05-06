@@ -1,11 +1,16 @@
+package StartGameMenu;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.JPanel;
 
-public class StartGameMenu extends JPanel {
-    public StartGameMenu(){
+import Buttons.BackButton;
+import MainMenu.MainMenu;
+import QuizGame.QuizGameHard;
 
+public class StartGameMenu extends JPanel {
+
+    public StartGameMenu(){
         GridBagConstraints gbc = new GridBagConstraints();
         StartGameLabel gameStartLabel = new StartGameLabel();
         DifficultyButtonsPanel difficultyButtonsPanel = new DifficultyButtonsPanel();
@@ -25,9 +30,7 @@ public class StartGameMenu extends JPanel {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.LAST_LINE_START;
         add(backButton, gbc);
-
-
-            
+        
         backButton.addBackButtonListener(e -> {
             removeAll();
             add(new MainMenu());
@@ -35,20 +38,23 @@ public class StartGameMenu extends JPanel {
             repaint();
         });
         difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
-            removeAll();
-            add(new QuizFrame("Quiz Game"));
-            revalidate();
-            repaint();
+            MainMenu.setDifficulty(1);
+            // removeAll();
+            // add(new QuizFrame("Quiz Game"));
+            // revalidate();
+            // repaint();
         });
         difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
-            removeAll();
-            add(new QuizFrame("Quiz Game"));
-            revalidate();
-            repaint();
+            MainMenu.setDifficulty(2);
+            // removeAll();
+            // add(new QuizFrame("Quiz Game"));
+            // revalidate();
+            // repaint();
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
+            MainMenu.setDifficulty(3);
             removeAll();
-            add(new QuizFrame("Quiz Game"));
+            add(new QuizGameHard(3));
             revalidate();
             repaint();
         });

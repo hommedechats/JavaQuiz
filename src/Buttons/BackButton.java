@@ -1,3 +1,4 @@
+package Buttons;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
@@ -7,7 +8,7 @@ import javax.swing.border.LineBorder;
 
 public class BackButton extends JButton {
     
-    BackButton() {
+    public BackButton() {
         super("Back");
         setBackground(new Color(255,255,255));
         setPreferredSize(new Dimension(150, 50));

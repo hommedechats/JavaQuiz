@@ -1,17 +1,24 @@
 import javax.swing.*;
 
+import MainMenu.MainMenu;
+
 
 public class Main {
     public static void main(String[] args) {
+        JFrame frame = new JFrame("Quiz Game");
+        MainMenu mainMenu = new MainMenu(); 
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Quiz Game");
-            JPanel mainMenu = new MainMenu();
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setResizable(false);
             frame.setSize(1400, 800);
             frame.setVisible(true);
             frame.add(mainMenu);
-            // frame.add(quizPanel);
+            frame.revalidate();
         });
+
+        
+        // frame.add(quizPanel);
     }
+    
+
 }

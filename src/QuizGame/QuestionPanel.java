@@ -1,3 +1,4 @@
+package QuizGame;
 import javax.swing.*;
 
 
