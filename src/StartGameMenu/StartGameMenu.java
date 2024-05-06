@@ -1,11 +1,16 @@
+package StartGameMenu;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.JPanel;
 
-public class StartGameMenu extends JPanel {
-    public StartGameMenu(){
+import Buttons.BackButton;
+import MainMenu.MainMenu;
+import QuizGame.QuizGameHard;
 
+public class StartGameMenu extends JPanel {
+
+    public StartGameMenu(){
         GridBagConstraints gbc = new GridBagConstraints();
         StartGameLabel gameStartLabel = new StartGameLabel();
         DifficultyButtonsPanel difficultyButtonsPanel = new DifficultyButtonsPanel();
@@ -48,10 +53,10 @@ public class StartGameMenu extends JPanel {
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
             MainMenu.setDifficulty(3);
-            // removeAll();
-            // add(new QuizFrame("Quiz Game"));
-            // revalidate();
-            // repaint();
+            removeAll();
+            add(new QuizGameHard(3));
+            revalidate();
+            repaint();
         });
     }
 }

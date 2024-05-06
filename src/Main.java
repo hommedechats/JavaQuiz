@@ -1,11 +1,13 @@
 import javax.swing.*;
 
+import MainMenu.MainMenu;
+
 
 public class Main {
     public static void main(String[] args) {
+        JFrame frame = new JFrame("Quiz Game");
+        MainMenu mainMenu = new MainMenu(); 
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Quiz Game");
-            MainMenu mainMenu = new MainMenu();
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setResizable(false);
             frame.setSize(1400, 800);
@@ -13,25 +15,10 @@ public class Main {
             frame.add(mainMenu);
             frame.revalidate();
         });
-        while(true){
-            if(MainMenu.getDifficulty() == 1){
-                System.out.println("Difficulty: " + MainMenu.getDifficulty());
-                //load easy questions
-                // for(;;){
-                    
-                // }
-            }
-            else if(MainMenu.getDifficulty() == 2){
-                System.out.println("Difficulty: " + MainMenu.getDifficulty());
 
-                //load medium questions
-            }
-            else if(MainMenu.getDifficulty() == 3){
-                System.out.println("Difficulty: " + MainMenu.getDifficulty());  
-                //load hard questions
-            }
-        }
         
         // frame.add(quizPanel);
     }
+    
+
 }

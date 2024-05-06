@@ -1,15 +1,20 @@
+package QuizGame;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-class QuizFrame extends JPanel {
+class QuizGamePanel extends JPanel {
 
     // 1 - easy 2 - medium 3 - hard
     private int difficulty;
 
-    public QuizFrame(String title) {
+    public QuizGamePanel(int diff) {
+
+        this.difficulty = diff;
+        
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -23,18 +28,7 @@ class QuizFrame extends JPanel {
         add(questionPanel, gbc);
         
         ArrayList<String> choices = new ArrayList<String>();
-        setDifficulty();
-
-        if(difficulty == 1){
-            choices = diffEasy();
-        }
-        else if(difficulty == 2){
-            choices = diffMedium();
-        }
-        else if(difficulty == 3){
-            choices = diffHard();
-        }
-
+        
         OptionsPanel optionsPanel = new OptionsPanel(choices);
 
         optionsPanel.addButtonListener(new ActionListener() {
@@ -78,15 +72,4 @@ class QuizFrame extends JPanel {
         return choices;
     }
 
-    private void setDifficulty() {
-        if(MainMenu.getDifficulty() == 1){
-            difficulty = 1;
-        }
-        else if(MainMenu.getDifficulty() == 2){
-            difficulty = 2;
-        }
-        else if(MainMenu.getDifficulty() == 3){
-            difficulty = 3;
-        }
-    }
 }

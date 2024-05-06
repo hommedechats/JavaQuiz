@@ -1,7 +1,11 @@
+package MainMenu;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
 import javax.swing.JPanel;
+
+import Leaderboard.LeadeaboardMenu;
+import StartGameMenu.StartGameMenu;
 
 public class MainMenu extends JPanel {
 
