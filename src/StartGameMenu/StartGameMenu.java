@@ -54,7 +54,7 @@ public class StartGameMenu extends JPanel {
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
             MainMenu.setDifficulty(3);
             removeAll();
-            add(new QuizGameHard(3));
+            add(new QuizGameHard().gameLoop());
             revalidate();
             repaint();
         });
