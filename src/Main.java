@@ -15,7 +15,6 @@ public class Main {
             frame.add(mainMenu);
             frame.revalidate();
         });
-
         
         // frame.add(quizPanel);
     }

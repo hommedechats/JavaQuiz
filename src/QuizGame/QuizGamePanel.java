@@ -8,8 +8,10 @@ import java.util.ArrayList;
 
 class QuizGamePanel extends JPanel {
 
-    public QuizGamePanel(String question, ArrayList<String> choices, String answer) {
+    private String answer;
 
+    public QuizGamePanel(String question, ArrayList<String> choices, String answer) {
+        this.answer = answer;
         QuestionPanel questionPanel = new QuestionPanel(question);
         OptionsPanel optionsPanel = new OptionsPanel(choices);
 
@@ -31,13 +33,24 @@ class QuizGamePanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 JButton button = (JButton)e.getSource();
                 String option = button.getText();
-                if(option.equals(answer)){  
+                if(isCorrectAnswer(option)){  
                     System.out.println("Correct answer.");
+                    button.setText("Correct answer.");
+                    CardLayout cardLayout = (CardLayout) getParent().getLayout();
+                    cardLayout.next(getParent());
                 }
                 else{
                     System.out.println("Wrong answer.");
+                    button.setText("Wrong answer.");
+                    CardLayout cardLayout = (CardLayout) getParent().getLayout();
+                    cardLayout.next(getParent());
                 }
             }
         });
     }
+
+    private boolean isCorrectAnswer(String option) {
+        return option.equals(answer);
+    }
+
 }
