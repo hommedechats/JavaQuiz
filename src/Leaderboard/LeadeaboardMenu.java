@@ -29,18 +29,7 @@ public class LeadeaboardMenu extends JPanel {
         gbc.gridy = 0;
         add(leaderboardLabel, gbc);
         
-        ArrayList<String> list = new ArrayList<>();
-        list.add("1. Jonas 100");
-        list.add("2. Petras 90");
-        list.add("3. Ona 80");
-        list.add("4. Jurgis 70");
-        list.add("5. Marija 60");
-        list.add("1. Jonas 100");
-        list.add("2. Petras 90");
-        list.add("3. Ona 80");
-        list.add("4. Jurgis 70");
-        list.add("5. Marija 60");
-        Leaderboard leaderboard = new Leaderboard(list);
+        Leaderboard leaderboard = new Leaderboard();
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.NORTH;

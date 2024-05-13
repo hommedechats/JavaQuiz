@@ -5,8 +5,10 @@ import java.awt.GridBagLayout;
 import javax.swing.JPanel;
 
 import Buttons.BackButton;
+import Buttons.RulesButton;
 import MainMenu.MainMenu;
-import QuizGame.QuizGameHard;
+import MainMenu.RulesPanel;
+import QuizGame.QuizGame;
 
 public class StartGameMenu extends JPanel {
 
@@ -15,6 +17,7 @@ public class StartGameMenu extends JPanel {
         StartGameLabel gameStartLabel = new StartGameLabel();
         DifficultyButtonsPanel difficultyButtonsPanel = new DifficultyButtonsPanel();
         BackButton backButton = new BackButton();
+        RulesButton rulesButton = new RulesButton();
 
         this.setLayout(new GridBagLayout());
         this.setSize(new Dimension(1000, 800));
@@ -22,14 +25,23 @@ public class StartGameMenu extends JPanel {
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.NORTH;
         gbc.insets = new java.awt.Insets(10, 10, 10, 10);
+        
+        gbc.gridy = 0;
+        // gbc.gridx = 0;s
+        gbc.gridwidth = 2;
         add(gameStartLabel, gbc);
 
         gbc.gridy = 1;
+        gbc.gridwidth = 2;
         add(difficultyButtonsPanel, gbc);
 
         gbc.gridy = 2;
-        gbc.anchor = GridBagConstraints.LAST_LINE_START;
+        gbc.anchor = GridBagConstraints.LINE_START;
         add(backButton, gbc);
+        gbc.anchor = GridBagConstraints.LINE_END;
+        gbc.gridx = 1;
+        add(rulesButton, gbc);
+
         
         backButton.addBackButtonListener(e -> {
             removeAll();
@@ -37,24 +49,27 @@ public class StartGameMenu extends JPanel {
             revalidate();
             repaint();
         });
+        rulesButton.addRulesButtonListener(e -> {
+            removeAll();
+            add(new RulesPanel());
+            revalidate();
+            repaint();
+        });
         difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
-            MainMenu.setDifficulty(1);
-            // removeAll();
-            // add(new QuizFrame("Quiz Game"));
-            // revalidate();
-            // repaint();
+            removeAll();
+            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\easy.json").questionPanels());
+            revalidate();
+            repaint();
         });
         difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
-            MainMenu.setDifficulty(2);
-            // removeAll();
-            // add(new QuizFrame("Quiz Game"));
-            // revalidate();
-            // repaint();
+            removeAll();
+            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\medium.json").questionPanels());
+            revalidate();
+            repaint();
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
-            MainMenu.setDifficulty(3);
             removeAll();
-            add(new QuizGameHard(3));
+            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\hard.json").questionPanels());
             revalidate();
             repaint();
         });
