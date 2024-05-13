@@ -1,7 +1,27 @@
 [
     {
-    "question": "What is the largest planet in our solar system?",
-    "options": ["Jupiter", "Saturn", "Mars", "Earth"],
-    "answer": "Jupiter"
+        "question": "What is the capital of France?",
+        "options": ["Paris", "London", "Berlin", "Rome"],
+        "answer": "Paris"
+    },
+    {
+        "question": "What is the capital of Naxui?",
+        "options": ["Paris", "London", "Vilnius", "Rome"],
+        "answer": "Paris"
+    },
+    {
+        "question": "What is the capital of Pizdukai?",
+        "options": ["Papai", "London", "pizda", "Rome"],
+        "answer": "Papukai"
+    }, 
+    {
+        "question": "What is the capital of Pizda?",
+        "options": ["Paris", "LMAO", "Berlin", "Rome"],
+        "answer": "KAAAAAAAAAAA"
+    },
+    {
+        "question": "What is the capital of Kaunas?",
+        "options": ["Paris", "London", "Berlin", "Kaunas"],
+        "answer": "Paris"
     }
 ]
