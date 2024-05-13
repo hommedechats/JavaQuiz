@@ -1,6 +1,5 @@
 package QuizGame;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;

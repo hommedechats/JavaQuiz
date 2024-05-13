@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 
-public class QuizGameEasy{
+public class QuizGame{
 
-    private String filename = "D:\\Programming\\JavaQuiz\\data\\easy.json"; // "hard.txt
     private ArrayList<Question> questions;
     private int currentQuestionIndex = 0;
     private Player player;
 
-    public QuizGameEasy() {
+    public QuizGame(String filename) {
+        // this.filename = filename;
         player = new Player();
         ReadFromJson readFromJson = new ReadFromJson(filename);
         questions = readFromJson.getQuestions();
@@ -30,14 +30,14 @@ public class QuizGameEasy{
     public JPanel questionPanels(){
         int i = 0;
         JPanel cards = new JPanel(new CardLayout());
-        for ( i = 0 ; i < 1 ; i++ ) {
+        for ( i = 0 ; i < 5 ; i++ ) {
             cards.add(initPanel());
         }
         return cards;
     }
     
     private QuizGamePanel initPanel(){
-        if(currentQuestionIndex < questions.size()){
+        if(currentQuestionIndex < questions.size() && currentQuestionIndex < 20){
             Question q = questions.get(currentQuestionIndex);
             nextQuestion();
             return new QuizGamePanel(q.getQuestion(), q.getOptions(), q.getAnswer());

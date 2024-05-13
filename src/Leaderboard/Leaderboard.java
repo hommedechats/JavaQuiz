@@ -4,7 +4,6 @@ import java.awt.Font;
 
 import java.awt.GridLayout;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;

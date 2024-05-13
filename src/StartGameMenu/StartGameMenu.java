@@ -8,9 +8,7 @@ import Buttons.BackButton;
 import Buttons.RulesButton;
 import MainMenu.MainMenu;
 import MainMenu.RulesPanel;
-import QuizGame.QuizGameEasy;
-import QuizGame.QuizGameMedium;
-import QuizGame.QuizGameHard;
+import QuizGame.QuizGame;
 
 public class StartGameMenu extends JPanel {
 
@@ -59,19 +57,19 @@ public class StartGameMenu extends JPanel {
         });
         difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGameEasy().questionPanels());
+            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\easy.json").questionPanels());
             revalidate();
             repaint();
         });
         difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGameMedium().questionPanels());
+            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\medium.json").questionPanels());
             revalidate();
             repaint();
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGameHard().questionPanels());
+            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\hard.json").questionPanels());
             revalidate();
             repaint();
         });
