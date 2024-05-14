@@ -5,23 +5,68 @@
         "answer": "Paris"
     },
     {
-        "question": "What is the capital of Naxui?",
-        "options": ["Paris", "London", "Vilnius", "Rome"],
-        "answer": "Paris"
+        "question": "What is the capital of Japan?",
+        "options": ["Tokyo", "Beijing", "Seoul", "Bangkok"],
+        "answer": "Tokyo"
     },
     {
-        "question": "What is the capital of Pizdukai?",
-        "options": ["Papai", "London", "pizda", "Rome"],
-        "answer": "Papukai"
-    }, 
-    {
-        "question": "What is the capital of Pizda?",
-        "options": ["Paris", "LMAO", "Berlin", "Rome"],
-        "answer": "KAAAAAAAAAAA"
+        "question": "What is the capital of Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+        "answer": "Canberra"
     },
     {
-        "question": "What is the capital of Kaunas?",
-        "options": ["Paris", "London", "Berlin", "Kaunas"],
-        "answer": "Paris"
+        "question": "What is the capital of Canada?",
+        "options": ["Toronto", "Montreal", "Ottawa", "Vancouver"],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "What is the capital of Ukraine?",
+        "options": ["Kiev", "Kharkiv", "Lviv", "Odessa"],
+        "answer": "Kiev"
+    },
+    {
+        "question": "What is the capital of Spain?",
+        "options": ["Madrid", "Barcelona", "Seville", "Valencia"],
+        "answer": "Madrid"
+    },
+    {
+        "question": "What is the capital of Latvia?",
+        "options": ["Riga", "Tallinn", "Vilnius", "Warsaw"],
+        "answer": "Riga"
+    },
+    {
+        "question": "What is the capital of Estonia?",
+        "options": ["Tallinn", "Helsinki", "Vilnius", "Riga"],
+        "answer": "Tallinn"
+    },
+    {
+        "question": "What is the capital of Norway?",
+        "options": ["Oslo", "Stockholm", "Copenhagen", "Helsinki"],
+        "answer": "Oslo"
+    },
+    {
+        "question": "What is the capital of the USA?",
+        "options": ["New York City", "Los Angeles", "Washington D.C.", "Chicago"],
+        "answer": "Washington D.C."
+    },
+    {
+        "question": "What is the capital of the UK?",
+        "options": ["Manchester", "Birmingham", "Glasgow", "London"],
+        "answer": "London"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": ["Munich", "Hamburg", "Berlin", "Frankfurt"],
+        "answer": "Berlin"
+    },
+    {
+        "question": "What is the capital of Poland?",
+        "options": ["Kraków", "Gdańsk", "Poznań", "Warsaw"],
+        "answer": "Warsaw"
+    },
+    {
+        "question": "What is the capital of the Czech Republic?",
+        "options": ["Brno", "Ostrava", "Plzeň", "Prague"],
+        "answer": "Prague"
     }
 ]

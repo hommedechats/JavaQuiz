@@ -1,22 +1,18 @@
 package Leaderboard;
-import java.awt.Dimension;
-import java.awt.Font;
-
-import java.awt.GridLayout;
-import java.util.ArrayList;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 
 import QuizGame.Player;
 import QuizGame.ReadFromJson;
 
+import javax.swing.*;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import java.awt.*;
+import java.util.ArrayList;
+
 public class Leaderboard extends JPanel {
     
-    private ReadFromJson readFromJson = new ReadFromJson("D:\\Programming\\JavaQuiz\\data\\leaderboard.json", true);
+    private ReadFromJson readFromJson = new ReadFromJson("data\\leaderboard.json", true);
     private ArrayList<Player> leaderboard;
 
 
@@ -35,7 +31,6 @@ public class Leaderboard extends JPanel {
             addPlayerLabel(player);
         }      
     }
-
 
     private void addPlayerLabel(Player player){
         String str = player.getName() + " " + player.getScore();

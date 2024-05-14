@@ -1,8 +1,8 @@
 package QuizGame;
 
-import java.awt.CardLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
-import javax.swing.JPanel;
 
 
 public class QuizGame{

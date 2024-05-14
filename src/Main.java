@@ -1,6 +1,6 @@
-import javax.swing.*;
-
 import MainMenu.MainMenu;
+
+import javax.swing.*;
 
 
 public class Main {

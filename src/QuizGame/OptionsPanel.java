@@ -1,4 +1,5 @@
 package QuizGame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -6,11 +7,13 @@ import java.util.ArrayList;
 
 class OptionsPanel extends JPanel {
     public OptionsPanel(ArrayList<String> list) {
+
         GridBagLayout layout = new GridBagLayout();
         setLayout(layout);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.NORTH;
+
         gbc.weightx = 0.25;
         gbc.weighty = 0.25;
         gbc.gridx = 0;

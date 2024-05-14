@@ -1,18 +1,14 @@
 package Leaderboard;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.util.ArrayList;
-import javax.swing.JPanel;
 
 import Buttons.BackButton;
 import MainMenu.MainMenu;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class LeadeaboardMenu extends JPanel {
     
     public LeadeaboardMenu(){
-
         LeaderboardLabel leaderboardLabel = new LeaderboardLabel();
         BackButton backButton = new BackButton();
         GridBagConstraints gbc = new GridBagConstraints();
@@ -28,7 +24,7 @@ public class LeadeaboardMenu extends JPanel {
         gbc.weighty = 0.25;
         gbc.gridy = 0;
         add(leaderboardLabel, gbc);
-        
+
         Leaderboard leaderboard = new Leaderboard();
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;

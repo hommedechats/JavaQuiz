@@ -1,14 +1,13 @@
 package StartGameMenu;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import javax.swing.JPanel;
 
 import Buttons.BackButton;
 import Buttons.RulesButton;
 import MainMenu.MainMenu;
 import MainMenu.RulesPanel;
 import QuizGame.QuizGame;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class StartGameMenu extends JPanel {
 
@@ -57,19 +56,19 @@ public class StartGameMenu extends JPanel {
         });
         difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\easy.json").questionPanels());
+            add(new QuizGame("data\\easy.json").questionPanels());
             revalidate();
             repaint();
         });
         difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\medium.json").questionPanels());
+            add(new QuizGame("data\\medium.json").questionPanels());
             revalidate();
             repaint();
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGame("D:\\Programming\\JavaQuiz\\data\\hard.json").questionPanels());
+            add(new QuizGame("data\\hard.json").questionPanels());
             revalidate();
             repaint();
         });

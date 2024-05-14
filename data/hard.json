@@ -1,27 +1,77 @@
 [
     {
-        "question": "What is the capital of France?",
-        "options": ["Paris", "London", "Berlin", "Rome"],
-        "answer": "Paris"
+        "question": "What is the capital of Bosnia and Herzegovina?",
+        "options": ["Banja Luka", "Sarajevo", "Mostar", "Tuzla"],
+        "answer": "Sarajevo"
     },
     {
-        "question": "What is the capital of Naxui?",
-        "options": ["Paris", "London", "Vilnius", "Rome"],
-        "answer": "Paris"
+        "question": "What is the capital of Uruguay?",
+        "options": ["Montevideo", "Salto", "Paysandú", "Rivera"],
+        "answer": "Montevideo"
     },
     {
-        "question": "What is the capital of Pizda?",
-        "options": ["Paris", "LMAO", "Berlin", "Rome"],
-        "answer": "KAAAAAAAAAAA"
+        "question": "What is the capital of Lebanon?",
+        "options": ["Tripoli", "Beirut", "Sidon", "Tyre"],
+        "answer": "Beirut"
     },
     {
-        "question": "What is the capital of Kaunas?",
-        "options": ["Paris", "London", "Berlin", "Kaunas"],
-        "answer": "Paris"
+        "question": "What is the capital of Libya?",
+        "options": ["Tripoli", "Benghazi", "Misrata", "Sirte"],
+        "answer": "Tripoli"
     },
     {
-        "question": "What is the capital of Pizdukai?",
-        "options": ["Papai", "London", "pizda", "Rome"],
-        "answer": "Papukai"
-    } 
+        "question": "What is the capital of Georgia?",
+        "options": ["Tbilisi", "Kutaisi", "Batumi", "Rustavi"],
+        "answer": "Tbilisi"
+    },
+    {
+        "question": "What is the capital of Venezuela?",
+        "options": ["Caracas", "Maracaibo", "Valencia", "Barquisimeto"],
+        "answer": "Caracas"
+    },
+    {
+        "question": "What is the capital of Algeria?",
+        "options": ["Algiers", "Oran", "Constantine", "Annaba"],
+        "answer": "Algiers"
+    },
+    {
+        "question": "What is the capital of North Macedonia?",
+        "options": ["Skopje", "Bitola", "Kumanovo", "Prilep"],
+        "answer": "Skopje"
+    },
+    {
+        "question": "What is the capital of Montenegro?",
+        "options": ["Nikšić", "Podgorica", "Cetinje", "Budva"],
+        "answer": "Podgorica"
+    },
+    {
+        "question": "What is the capital of Ghana?",
+        "options": ["Kumasi", "Tamale", "Accra", "Takoradi"],
+        "answer": "Accra"
+    },
+    {
+        "question": "What is the capital of Zimbabwe?",
+        "options": ["Bulawayo", "Harare", "Mutare", "Gweru"],
+        "answer": "Harare"
+    },
+    {
+        "question": "What is the capital of Angola?",
+        "options": ["Huambo", "Lobito", "Luanda", "Benguela"],
+        "answer": "Luanda"
+    },
+    {
+        "question": "What is the capital of Bhutan?",
+        "options": ["Phuntsholing", "Paro", "Thimphu", "Punakha"],
+        "answer": "Thimphu"
+    },
+    {
+        "question": "What is the capital of Uganda?",
+        "options": ["Kampala", "Gulu", "Jinja", "Mbarara"],
+        "answer": "Kampala"
+    },
+    {
+        "question": "What is the capital of Myanmar?",
+        "options": ["Yangon", "Mandalay", "Naypyidaw", "Bago"],
+        "answer": "Naypyidaw"
+    }
 ]

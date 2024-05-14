@@ -1,4 +1,5 @@
 package QuizGame;
+
 import javax.swing.*;
 
 import java.awt.*;
@@ -19,6 +20,7 @@ class QuizGamePanel extends JPanel {
         setLayout(new GridBagLayout());
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.NORTH;
+
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
         gbc.gridx = 0;
@@ -33,6 +35,7 @@ class QuizGamePanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 JButton button = (JButton)e.getSource();
                 String option = button.getText();
+
                 if(isCorrectAnswer(option)){  
                     System.out.println("Correct answer.");
                     button.setText("Correct answer.");

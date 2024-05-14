@@ -1,27 +1,97 @@
 [
     {
-        "question": "What is the capital of Naxui?",
-        "options": ["Paris", "London", "Vilnius", "Rome"],
-        "answer": "Paris"
+        "question": "What is the capital of South Korea?",
+        "options": ["Busan", "Seoul", "Incheon", "Daegu"],
+        "answer": "Seoul"
     },
     {
-        "question": "What is the capital of Pizdukai?",
-        "options": ["Papai", "London", "pizda", "Rome"],
-        "answer": "Papukai"
-    }, 
-    {
-        "question": "What is the capital of Pizda?",
-        "options": ["Paris", "LMAO", "Berlin", "Rome"],
-        "answer": "KAAAAAAAAAAA"
+        "question": "What is the capital of Egypt?",
+        "options": ["Alexandria", "Cairo", "Luxor", "Aswan"],
+        "answer": "Cairo"
     },
     {
-        "question": "What is the capital of France?",
-        "options": ["Paris", "London", "Berlin", "Rome"],
-        "answer": "Paris"
+        "question": "What is the capital of Switzerland?",
+        "options": ["Geneva", "Zurich", "Bern", "Basel"],
+        "answer": "Bern"
     },
     {
-        "question": "What is the capital of Kaunas?",
-        "options": ["Paris", "London", "Berlin", "Kaunas"],
-        "answer": "Paris"
+        "question": "What is the capital of Peru?",
+        "options": ["Lima", "Cusco", "Arequipa", "Trujillo"],
+        "answer": "Lima"
+    },
+    {
+        "question": "What is the capital of Romania?",
+        "options": ["Bucharest", "Cluj-Napoca", "Timișoara", "Iași"],
+        "answer": "Bucharest"
+    },
+    {
+        "question": "What is the capital of New Zealand?",
+        "options": ["Auckland", "Christchurch", "Wellington", "Hamilton"],
+        "answer": "Wellington"
+    },
+    {
+        "question": "What is the capital of the Philippines?",
+        "options": ["Manila", "Quezon City", "Cebu City", "Davao City"],
+        "answer": "Manila"
+    },
+    {
+        "question": "What is the capital of Sweden?",
+        "options": ["Gothenburg", "Malmö", "Stockholm", "Uppsala"],
+        "answer": "Stockholm"
+    },
+    {
+        "question": "What is the capital of Luxembourg?",
+        "options": ["Luxembourg City", "Esch-sur-Alzette", "Differdange", "Dudelange"],
+        "answer": "Luxembourg City"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": ["Guadalajara", "Monterrey", "Mexico City", "Puebla"],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "What is the capital of Belgium?",
+        "options": ["Antwerp", "Ghent", "Bruges", "Brussels"],
+        "answer": "Brussels"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": ["Mumbai", "Kolkata", "Chennai", "New Delhi"],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "What is the capital of Chile?",
+        "options": ["Valparaíso", "Santiago", "Concepción", "Antofagasta"],
+        "answer": "Santiago"
+    },
+    {
+        "question": "What is the capital of Albania?",
+        "options": ["Durrës", "Tirana", "Vlorë", "Shkodër"],
+        "answer": "Tirana"
+    },
+    {
+        "question": "What is the capital of Malaysia?",
+        "options": ["George Town", "Kuala Lumpur", "Johor Bahru", "Kuching"],
+        "answer": "Kuala Lumpur"
+    },
+    {
+        "question": "What is the capital of Slovakia?",
+        "options": ["Bratislava", "Prešov", "Košice", "Žilina"],
+        "answer": "Bratislava"
+    },
+    {
+        "question": "What is the capital of Croatia?",
+        "options": ["Rijeka", "Split", "Zagreb","Osijek"],
+        "answer": "Zagreb"
+    },
+    {
+        "question": "What is the capital of Syria?",
+        "options": ["Homs", "Damascus", "Aleppo", "Hama"],
+        "answer": "Damascus"
+    },
+    {
+        "question": "What is the capital of Colombia?",
+        "options": ["Medellín", "Cali", "Barranquilla", "Bogotá"],
+        "answer": "Bogotá"
     }
 ]
