@@ -11,7 +11,7 @@ public class Timer{
     private long addedTime;
 
     public double getElapsedTimeMs(){
-        return elapsedTimeMs;
+        return elapsedTimeMs + addedTime;
     }
 
     public Timer(){

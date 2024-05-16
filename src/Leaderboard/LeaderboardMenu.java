@@ -1,6 +1,7 @@
 package Leaderboard;
 
 import Buttons.BackButton;
+import EndGame.EndGamePanel;
 import MainMenu.MainMenu;
 
 import javax.swing.*;
@@ -8,7 +9,7 @@ import java.awt.*;
 
 public class LeaderboardMenu extends JPanel {
     //leaderboard
-    public LeaderboardMenu(){
+    public LeaderboardMenu(int flag){
         LeaderboardLabel leaderboardLabel = new LeaderboardLabel();
         BackButton backButton = new BackButton();
         GridBagConstraints gbc = new GridBagConstraints();
@@ -37,11 +38,21 @@ public class LeaderboardMenu extends JPanel {
         gbc.anchor = GridBagConstraints.LAST_LINE_START;
         add(backButton, gbc);
         
-        backButton.addBackButtonListener(e -> {
-            removeAll();
-            add(new MainMenu());
-            revalidate();
-            repaint();
-        });
+        if(flag == 0){
+            backButton.addBackButtonListener(e -> {
+                removeAll();
+                add(new MainMenu());
+                revalidate();
+                repaint();
+            });
+        }
+        else{
+            backButton.addBackButtonListener(e -> {
+                removeAll();
+                add(new EndGamePanel());
+                revalidate();
+                repaint();
+            });
+        }
     }
 }

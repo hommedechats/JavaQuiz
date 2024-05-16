@@ -26,7 +26,6 @@ public class StartGameMenu extends JPanel {
         gbc.insets = new java.awt.Insets(10, 10, 10, 10);
         
         gbc.gridy = 0;
-        // gbc.gridx = 0;s
         gbc.gridwidth = 2;
         add(gameStartLabel, gbc);
 
@@ -56,19 +55,19 @@ public class StartGameMenu extends JPanel {
         });
         difficultyButtonsPanel.buttons.easyButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGame("data\\easy.json").questionPanels());
+            add(new QuizGame("data/easy.json").questionPanels());
             revalidate();
             repaint();
         });
         difficultyButtonsPanel.buttons.mediumButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGame("data\\medium.json").questionPanels());
+            add(new QuizGame("data/medium.json").questionPanels());
             revalidate();
             repaint();
         });
         difficultyButtonsPanel.buttons.hardButton.addActionListener(e -> {
             removeAll();
-            add(new QuizGame("data\\hard.json").questionPanels());
+            add(new QuizGame("data/hard.json").questionPanels());
             revalidate();
             repaint();
         });

@@ -3,29 +3,32 @@ package QuizGame;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class QuizGame{
 
+    private ArrayList<Integer> visitedQuestions;
     private ArrayList<Question> questions;
     private int questionIndex = 0;
     private final int QUESTION_COUNT = 20;
 
     public QuizGame(String filename) {
+        visitedQuestions = new ArrayList<>();
         Player player = Player.getInstance();
         player.setName("opa");
         ReadFromJson readFromJson = new ReadFromJson(filename);
         questions = readFromJson.getQuestions();
-        printAllQuestions();
+        // printAllQuestions();
     }
 
-    private void printAllQuestions() {
-        for (Question q : questions) {
-            System.out.println(q.getQuestion());
-            System.out.println(q.getAnswer());
-            System.out.println(q.getOptions());
-        }
-    }
+    // private void printAllQuestions() {
+    //     for (Question q : questions) {
+    //         System.out.println(q.getQuestion());
+    //         System.out.println(q.getAnswer());
+    //         System.out.println(q.getOptions());
+    //     }
+    // }
     
     public JPanel questionPanels(){
         JPanel cards = new JPanel(new CardLayout());
@@ -36,15 +39,21 @@ public class QuizGame{
     }
 
     private QuizGamePanel initPanel(){
-        if(questionIndex < questions.size() && questionIndex < QUESTION_COUNT){
-            Question q = questions.get(questionIndex);
+        nextQuestion();
+        while(visitedQuestions.contains(questionIndex)){
             nextQuestion();
-            return new QuizGamePanel(q.getQuestion(), q.getOptions(), q.getAnswer());
         }
-        return null;
+        visitedQuestions.add(questionIndex);        
+        Question q = questions.get(questionIndex);
+        System.out.println(q.getQuestion()
+                + " " + q.getOptions()
+                + " " + q.getAnswer());
+        return new QuizGamePanel(q.getQuestion(), q.getOptions(), q.getAnswer());
+
     }
 
     private void nextQuestion(){
-        questionIndex++;
+        Random random = new Random();
+        questionIndex = random.nextInt(questions.size());
     }
 }
