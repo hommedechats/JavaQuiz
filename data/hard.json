@@ -73,5 +73,32 @@
         "question": "What is the capital of Myanmar?",
         "options": ["Yangon", "Mandalay", "Naypyidaw", "Bago"],
         "answer": "Naypyidaw"
+    },
+    {
+        "question": "What is the capital of Sierra Leone?",
+        "options": ["Bo", "Kenema", "Makeni", "Freetown"],
+        "answer": "Freetown"
+    },
+    {
+        "question": "What is the capital of Sudan?",
+        "options": ["Khartoum", "Omdurman", "Port Sudan", "Kassala"],
+        "answer": "Khartoum"
+    },
+    {
+        "question": "What is the capital of Nicaragua?",
+        "options": ["León", "Granada", "Managua", "Masaya"],
+        "answer": "Managua"
+    },
+    {
+        "question": "What is the capital of Suriname?",
+        "options": ["Nieuw Nickerie", "Paramaribo", "Lelydorp", "Moengo"],
+        "answer": "Paramaribo"
+    },
+    {
+        "question": "What is the capital of Kyrgyzstan?",
+        "options": ["Osh", "Jalal-Abad", "Bishkek", "Karakol"],
+        "answer": "Bishkek"
     }
+
+
 ]

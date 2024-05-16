@@ -6,9 +6,9 @@ import MainMenu.MainMenu;
 import javax.swing.*;
 import java.awt.*;
 
-public class LeadeaboardMenu extends JPanel {
-    
-    public LeadeaboardMenu(){
+public class LeaderboardMenu extends JPanel {
+    //leaderboard
+    public LeaderboardMenu(){
         LeaderboardLabel leaderboardLabel = new LeaderboardLabel();
         BackButton backButton = new BackButton();
         GridBagConstraints gbc = new GridBagConstraints();

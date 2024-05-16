@@ -1,11 +1,10 @@
 package MainMenu;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 
-import javax.swing.JPanel;
-
-import Leaderboard.LeadeaboardMenu;
+import Leaderboard.LeaderboardMenu;
 import StartGameMenu.StartGameMenu;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class MainMenu extends JPanel {
 
@@ -33,7 +32,7 @@ public class MainMenu extends JPanel {
         });
         buttons.leaderboardButton.addActionListener(e -> {
             removeAll();
-            add(new LeadeaboardMenu());
+            add(new LeaderboardMenu());
             revalidate();
             repaint();
         });

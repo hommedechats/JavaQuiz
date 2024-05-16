@@ -93,5 +93,11 @@
         "question": "What is the capital of Colombia?",
         "options": ["Medellín", "Cali", "Barranquilla", "Bogotá"],
         "answer": "Bogotá"
+    },
+    {
+        "question": "What is the capital of Saudi Arabia?",
+        "options": ["Jeddah", "Mecca", "Medina", "Riyadh"],
+        "answer": "Riyadh"
     }
+
 ]

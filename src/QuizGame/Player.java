@@ -2,15 +2,18 @@ package QuizGame;
 
 public class Player {
 
+    private static Player instance; //singleton
     private String name;
     private double score;
-    private int current_question_index;
+    private int currentQuestionIndex;
+    private double timeSpent;
 
 
     public Player() {
         this.name = "";
         this.score = 0;
-        this.current_question_index = 0;
+        this.currentQuestionIndex = 0;
+        this.timeSpent = 0.0;
     }
 
     public void increaseScore(double score) {
@@ -26,11 +29,11 @@ public class Player {
     }
 
     public int getCurrentQuestionIndex() {
-        return current_question_index;
+        return currentQuestionIndex;
     }
 
-    public void setCurrentQuestionIndex(int current_question_index) {
-        this.current_question_index = current_question_index;
+    public void updateCurrentQuestionIndex() {
+        this.currentQuestionIndex += 1;
     }
 
     public void setName(String name) {
@@ -39,5 +42,11 @@ public class Player {
 
     public void setScore(double score) {
         this.score = score;
+    }
+    public static Player getInstance() {
+        if (instance == null) {
+            instance = new Player();
+        }
+        return instance;
     }
 }

@@ -68,5 +68,35 @@
         "question": "What is the capital of the Czech Republic?",
         "options": ["Brno", "Ostrava", "Plzeň", "Prague"],
         "answer": "Prague"
+    },
+    {
+        "question": "What is the capital of Greece?",
+        "options": ["Thessaloniki", "Patras", "Athens", "Heraklion"],
+        "answer": "Athens"
+    },
+    {
+        "question": "What is the capital of Bulgaria?",
+        "options": ["Sofia", "Plovdiv", "Varna", "Burgas"],
+        "answer": "Sofia"
+    },
+    {
+        "question": "What is the capital of Denmark?",
+        "options": ["Copenhagen", "Aarhus", "Odense", "Aalborg"],
+        "answer": "Copenhagen"
+    },
+    {
+        "question": "What is the capital of Israel?",
+        "options": ["Tel Aviv", "Jerusalem", "Haifa", "Beersheba"],
+        "answer": "Jerusalem"
+    },
+    {
+        "question": "What is the capital of Portugal?",
+        "options": ["Porto", "Faro", "Coimbra", "Lisbon"],
+        "answer": "Lisbon"
+    },
+    {
+        "question": "What is the capital of Turkey?",
+        "options": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+        "answer": "Ankara"
     }
 ]

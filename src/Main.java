@@ -6,7 +6,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Quiz Game");
-        MainMenu mainMenu = new MainMenu(); 
+        MainMenu mainMenu = new MainMenu();
         SwingUtilities.invokeLater(() -> {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setResizable(false);
@@ -15,9 +15,6 @@ public class Main {
             frame.add(mainMenu);
             frame.revalidate();
         });
-        
-        // frame.add(quizPanel);
-    }
-    
 
+    }
 }

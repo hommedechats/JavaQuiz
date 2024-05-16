@@ -8,15 +8,15 @@ import java.util.ArrayList;
 public class QuizGame{
 
     private ArrayList<Question> questions;
-    private int currentQuestionIndex = 0;
-    private Player player;
+    private int questionIndex = 0;
+    private final int QUESTION_COUNT = 20;
 
     public QuizGame(String filename) {
-        // this.filename = filename;
-        player = new Player();
+        Player player = Player.getInstance();
+        player.setName("opa");
         ReadFromJson readFromJson = new ReadFromJson(filename);
         questions = readFromJson.getQuestions();
-        printAllQuestions();
+        printAllQuestions();;
     }
 
     private void printAllQuestions() {
@@ -28,17 +28,16 @@ public class QuizGame{
     }
     
     public JPanel questionPanels(){
-        int i = 0;
         JPanel cards = new JPanel(new CardLayout());
-        for ( i = 0 ; i < 5 ; i++ ) {
+        for (int i = 0 ; i < QUESTION_COUNT ; i++ ) {
             cards.add(initPanel());
         }
         return cards;
     }
-    
+
     private QuizGamePanel initPanel(){
-        if(currentQuestionIndex < questions.size() && currentQuestionIndex < 20){
-            Question q = questions.get(currentQuestionIndex);
+        if(questionIndex < questions.size() && questionIndex < QUESTION_COUNT){
+            Question q = questions.get(questionIndex);
             nextQuestion();
             return new QuizGamePanel(q.getQuestion(), q.getOptions(), q.getAnswer());
         }
@@ -46,7 +45,6 @@ public class QuizGame{
     }
 
     private void nextQuestion(){
-        currentQuestionIndex++;
+        questionIndex++;
     }
-
 }
