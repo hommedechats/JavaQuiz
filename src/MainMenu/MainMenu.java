@@ -32,7 +32,7 @@ public class MainMenu extends JPanel {
         });
         buttons.leaderboardButton.addActionListener(e -> {
             removeAll();
-            add(new LeaderboardMenu());
+            add(new LeaderboardMenu(0));
             revalidate();
             repaint();
         });

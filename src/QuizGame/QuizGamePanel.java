@@ -2,6 +2,8 @@ package QuizGame;
 
 import javax.swing.*;
 
+import EndGame.EndGamePanel;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,22 +41,27 @@ class QuizGamePanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 JButton button = (JButton)e.getSource();
                 String option = button.getText();
-
                 player.updateCurrentQuestionIndex();
-                if(player.getCurrentQuestionIndex() > 20){ //@change
+
+                if(player.getCurrentQuestionIndex() >= 20){ //@change
+                    System.out.println(player.getCurrentQuestionIndex());
                     timer.endTimer();
-                    System.exit(123);
+                    player.setTimeSpent(timer.getElapsedTimeMs());
+                    System.out.println(player.getTimeSpent() / 1000);
+                    getParent().add(new EndGamePanel());
+                    
                 }
                 if(isCorrectAnswer(option)){
                     button.setText("Correct answer.");
+                    player.increaseScore();
                     CardLayout cardLayout = (CardLayout) getParent().getLayout();
                     cardLayout.next(getParent());
                 }
                 else{
                     button.setText("Wrong answer.");
+                    timer.addTime(10);
                     CardLayout cardLayout = (CardLayout) getParent().getLayout();
                     cardLayout.next(getParent());
-                    timer.addTime(10);
                 }
             }
         });

@@ -4,7 +4,7 @@ public class Player {
 
     private static Player instance; //singleton
     private String name;
-    private double score;
+    private int score;
     private int currentQuestionIndex;
     private double timeSpent;
 
@@ -16,16 +16,20 @@ public class Player {
         this.timeSpent = 0.0;
     }
 
-    public void increaseScore(double score) {
-        this.score += score;
+    public void increaseScore() {
+        this.score += 1;
     }
     
-    public double getScore() {
+    public int getScore() {
         return score;
     }
     
     public String getName() {
         return name;
+    }
+
+    public double getTimeSpent() {
+        return timeSpent;
     }
 
     public int getCurrentQuestionIndex() {
@@ -36,13 +40,18 @@ public class Player {
         this.currentQuestionIndex += 1;
     }
 
+    public void setCurentQuestionIndex(int index) {
+        this.currentQuestionIndex = index;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setScore(double score) {
-        this.score = score;
+    public void setTimeSpent(double timeSpent) {
+        this.timeSpent = timeSpent;
     }
+
     public static Player getInstance() {
         if (instance == null) {
             instance = new Player();
