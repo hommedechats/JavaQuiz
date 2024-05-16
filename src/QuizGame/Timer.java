@@ -2,7 +2,7 @@ package QuizGame;
 
 import java.util.concurrent.TimeUnit;
 
-public class Timer{
+public class Timer {
 
     private static Timer instance; //singleton
     private long startTime;

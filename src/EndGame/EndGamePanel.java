@@ -1,14 +1,11 @@
 package EndGame;
 
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-
-import javax.swing.*;
-
 import Leaderboard.LeaderboardMenu;
 import QuizGame.Player;
 import StartGameMenu.StartGameMenu;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class EndGamePanel extends JPanel {
 
@@ -75,7 +72,7 @@ public class EndGamePanel extends JPanel {
 
     private void addButtonListeners() {
         restartButton.addActionListener(e -> {
-            player.setCurentQuestionIndex(0);
+            player.setCurrentQuestionIndex(0);
             removeAll();
             add(new StartGameMenu());
             revalidate();

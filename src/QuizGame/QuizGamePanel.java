@@ -1,9 +1,8 @@
 package QuizGame;
 
-import javax.swing.*;
-
 import EndGame.EndGamePanel;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +11,7 @@ import java.util.ArrayList;
 class QuizGamePanel extends JPanel {
 
     private String answer;
+    private final int QUESTION_COUNT = 20;
 
     public QuizGamePanel(String question, ArrayList<String> choices, String answer) {
         Player player = Player.getInstance();
@@ -43,13 +43,13 @@ class QuizGamePanel extends JPanel {
                 String option = button.getText();
                 player.updateCurrentQuestionIndex();
 
-                if(player.getCurrentQuestionIndex() >= 20){ //@change
+                if(player.getCurrentQuestionIndex() >= QUESTION_COUNT){
                     System.out.println(player.getCurrentQuestionIndex());
                     timer.endTimer();
                     player.setTimeSpent(timer.getElapsedTimeMs());
                     System.out.println(player.getTimeSpent() / 1000);
                     getParent().add(new EndGamePanel());
-                    
+
                 }
                 if(isCorrectAnswer(option)){
                     button.setText("Correct answer.");

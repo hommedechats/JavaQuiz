@@ -32,7 +32,7 @@ public class QuizGame{
     
     public JPanel questionPanels(){
         JPanel cards = new JPanel(new CardLayout());
-        for (int i = 0 ; i < QUESTION_COUNT ; i++ ) {
+        for (int i = 0; i < QUESTION_COUNT; i++) {
             cards.add(initPanel());
         }
         return cards;

@@ -40,7 +40,7 @@ public class Player {
         this.currentQuestionIndex += 1;
     }
 
-    public void setCurentQuestionIndex(int index) {
+    public void setCurrentQuestionIndex(int index) {
         this.currentQuestionIndex = index;
     }
 
