@@ -16,7 +16,7 @@ public class QuizGame{
         player.setName("opa");
         ReadFromJson readFromJson = new ReadFromJson(filename);
         questions = readFromJson.getQuestions();
-        printAllQuestions();;
+        printAllQuestions();
     }
 
     private void printAllQuestions() {
