@@ -26,12 +26,12 @@ public class RulesPanel extends JPanel{
         rules.setLayout(new java.awt.GridLayout(7, 1));
         rules.setBorder(new javax.swing.border.LineBorder(java.awt.Color.BLACK, 2, true));
         
-        addRuleLabel("1. The game has 3 levels: easy, medium and hard.");
-        addRuleLabel("2. Each level has 20 questions.");
+        addRuleLabel("1. The game has 3 difficulties: easy, medium and hard.");
+        addRuleLabel("2. Each difficulty has 20 questions.");
         addRuleLabel("3. The main goal is to answer as many questions correct as quickly as possible.");
         addRuleLabel("4. Your score is determined by the number of correct answers and the time");
         addRuleLabel(" it took to finish the game.");
-        addRuleLabel("5. For each wrong answer you get added 10 seconds to your time.");
+        addRuleLabel("5. For each wrong answer 10 seconds get added to your time.");
         addRuleLabel("6. The game ends when you finish all the questions.");
         
         

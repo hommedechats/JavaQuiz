@@ -18,11 +18,13 @@ public class EndGamePanel extends JPanel {
     private JButton exitButton;
     private JButton leaderboardButton;
     private JButton submitButton;
+    private LeaderboardMenu leaderboard;
+
 
     public EndGamePanel() {
 
         player = Player.getInstance();
-
+        leaderboard = new LeaderboardMenu(1);
         endGameLabel = new JLabel("Game Over!");
         scoreLabel = new JLabel("Your score: " + player.getScore()+"/20");
         timeSpentLabel = new JLabel("Time spent: " + player.getTimeSpent() / 1000 + "s");
@@ -69,10 +71,12 @@ public class EndGamePanel extends JPanel {
         gbc.gridx = 2;
         add(exitButton, gbc);
     }
-
+    
     private void addButtonListeners() {
         restartButton.addActionListener(e -> {
             player.setCurrentQuestionIndex(0);
+            player.setScore(0);
+            player.setTimeSpent(0);
             removeAll();
             add(new StartGameMenu());
             revalidate();
@@ -83,17 +87,19 @@ public class EndGamePanel extends JPanel {
         });
         leaderboardButton.addActionListener(e -> {
             removeAll();
-            add(new LeaderboardMenu(1));
+            add(leaderboard);
             revalidate();
             repaint();
         });
         submitButton.addActionListener(e -> {
             player.setName(nameField.getText());
+            leaderboard.addPlayer(player);
             System.out.println("Name: " + player.getName() + " Score: " + player.getScore() + " Time: " + player.getTimeSpent() / 1000 + "s");
             nameField.setText("Saved score");
         });
 
     }
+
 
     private JButton createButton(String text) {
         JButton button = new JButton(text);

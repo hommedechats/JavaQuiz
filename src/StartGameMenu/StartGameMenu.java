@@ -11,12 +11,18 @@ import java.awt.*;
 
 public class StartGameMenu extends JPanel {
 
+    private GridBagConstraints gbc;
+    private StartGameLabel gameStartLabel;
+    private DifficultyButtonsPanel difficultyButtonsPanel;
+    private BackButton backButton;
+    private RulesButton rulesButton;
+
     public StartGameMenu(){
-        GridBagConstraints gbc = new GridBagConstraints();
-        StartGameLabel gameStartLabel = new StartGameLabel();
-        DifficultyButtonsPanel difficultyButtonsPanel = new DifficultyButtonsPanel();
-        BackButton backButton = new BackButton();
-        RulesButton rulesButton = new RulesButton();
+        gbc = new GridBagConstraints();
+        gameStartLabel = new StartGameLabel();
+        difficultyButtonsPanel = new DifficultyButtonsPanel();
+        backButton = new BackButton();
+        rulesButton = new RulesButton();
 
         this.setLayout(new GridBagLayout());
         this.setSize(new Dimension(1000, 800));

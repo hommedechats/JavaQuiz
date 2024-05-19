@@ -12,14 +12,16 @@ class QuizGamePanel extends JPanel {
 
     private String answer;
     private final int QUESTION_COUNT = 20;
+    private QuestionPanel questionPanel;
+    private OptionsPanel optionsPanel;
 
     public QuizGamePanel(String question, ArrayList<String> choices, String answer) {
         Player player = Player.getInstance();
         Timer timer = Timer.getInstance();
 
         this.answer = answer;
-        QuestionPanel questionPanel = new QuestionPanel(question);
-        OptionsPanel optionsPanel = new OptionsPanel(choices);
+        questionPanel = new QuestionPanel(question);
+        optionsPanel = new OptionsPanel(choices);
 
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
@@ -46,8 +48,8 @@ class QuizGamePanel extends JPanel {
                 if(player.getCurrentQuestionIndex() >= QUESTION_COUNT){
                     System.out.println(player.getCurrentQuestionIndex());
                     timer.endTimer();
-                    player.setTimeSpent(timer.getElapsedTimeMs());
-                    System.out.println(player.getTimeSpent() / 1000);
+                    player.setTimeSpent(timer.getElapsedTimeMs() / 1000);
+                    System.out.println(player.getTimeSpent());
                     getParent().add(new EndGamePanel());
 
                 }

@@ -3,20 +3,27 @@ package Leaderboard;
 import Buttons.BackButton;
 import EndGame.EndGamePanel;
 import MainMenu.MainMenu;
+import QuizGame.Player;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class LeaderboardMenu extends JPanel {
-    //leaderboard
+    
+    private LeaderboardLabel leaderboardLabel;
+    private Leaderboard leaderboard;
+    private BackButton backButton;
+    private GridBagConstraints gbc;
+
     public LeaderboardMenu(int flag){
-        LeaderboardLabel leaderboardLabel = new LeaderboardLabel();
-        BackButton backButton = new BackButton();
-        GridBagConstraints gbc = new GridBagConstraints();
+
+        leaderboardLabel = new LeaderboardLabel();
+        backButton = new BackButton();
+        gbc = new GridBagConstraints();
+        leaderboard = new Leaderboard();
 
         this.setLayout(new GridBagLayout());
         this.setSize(new Dimension(1300, 600));
-        // this.setBorder(new LineBorder(Color.BLACK, 2, true));
         
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.CENTER;
@@ -26,7 +33,6 @@ public class LeaderboardMenu extends JPanel {
         gbc.gridy = 0;
         add(leaderboardLabel, gbc);
 
-        Leaderboard leaderboard = new Leaderboard();
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.NORTH;
@@ -48,11 +54,16 @@ public class LeaderboardMenu extends JPanel {
         }
         else{
             backButton.addBackButtonListener(e -> {
+                
                 removeAll();
                 add(new EndGamePanel());
                 revalidate();
                 repaint();
             });
         }
+    }
+
+    public void addPlayer(Player player){
+        leaderboard.addPlayer(player);
     }
 }
