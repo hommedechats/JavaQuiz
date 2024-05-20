@@ -16,7 +16,6 @@ public class Leaderboard extends JPanel {
     private ReadFromJson readFromJson = new ReadFromJson("data/leaderboard.json", true);
     private ArrayList<Player> leaderboard;
     private int playerCount = 1;
-    // private boolean alreadyAdded = false;
 
     Leaderboard(){
         this.leaderboard = readFromJson.getLeaderboard();
@@ -30,10 +29,15 @@ public class Leaderboard extends JPanel {
     public void addPlayer(Player player){
         leaderboard.add(player);
         leaderboard.sort(new Cmp());
-        writeToJson.write(leaderboard);
         playerCount = 1;
 
         populateLeaderboard();
+    }
+
+    public void saveToJson(){
+        System.out.println("Saving leaderboard to json");
+        leaderboard.sort(new Cmp());
+        writeToJson.write(leaderboard, Math.max(leaderboard.size(), 10));
     }
 
     private void addPlayerLabel(Player player){
@@ -54,4 +58,5 @@ public class Leaderboard extends JPanel {
             addPlayerLabel(player);
         }
     }
+    
 }

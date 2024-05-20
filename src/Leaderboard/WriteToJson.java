@@ -18,9 +18,10 @@ public class WriteToJson {
         gson = new GsonBuilder().setPrettyPrinting().create();
     }
 
-    public void write(ArrayList<Player> obj) {
+    public void write(ArrayList<Player> obj, int numEntries) {
         try (java.io.FileWriter writer = new java.io.FileWriter(filename)) {
-            gson.toJson(obj, new TypeToken<ArrayList<Player>>() {
+            ArrayList<Player> limitedList = new ArrayList<>(obj.subList(0, Math.min(numEntries, obj.size())));
+            gson.toJson(limitedList, new TypeToken<ArrayList<Player>>() {
             }.getType(), writer);
         } catch (java.io.IOException e) {
             e.printStackTrace();

@@ -21,6 +21,13 @@ public class Timer {
         this.addedTime = 0;
     }
 
+    public void resetTimer(){
+        this.startTime = 0;
+        this.endTime = 0;
+        this.elapsedTimeMs = 0.0;
+        this.addedTime = 0;
+    }
+
     public void startTimer(){
         startTime = System.nanoTime();
     }

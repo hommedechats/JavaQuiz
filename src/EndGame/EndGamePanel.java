@@ -3,6 +3,7 @@ package EndGame;
 import Leaderboard.LeaderboardMenu;
 import QuizGame.Player;
 import StartGameMenu.StartGameMenu;
+import QuizGame.Timer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,20 +20,22 @@ public class EndGamePanel extends JPanel {
     private JButton leaderboardButton;
     private JButton submitButton;
     private LeaderboardMenu leaderboard;
-
+    private Timer timer;
+    private boolean submitted = false; // can submit multiple times Idk how to fix FIXME
 
     public EndGamePanel() {
 
+        timer = Timer.getInstance();
         player = Player.getInstance();
-        leaderboard = new LeaderboardMenu(1);
         endGameLabel = new JLabel("Game Over!");
         scoreLabel = new JLabel("Your score: " + player.getScore()+"/20");
-        timeSpentLabel = new JLabel("Time spent: " + player.getTimeSpent() / 1000 + "s");
+        timeSpentLabel = new JLabel("Time spent: " + player.getTimeSpent() + "s");
         nameField = new JTextField("Enter your name");
         restartButton = createButton("Play again");
         exitButton = createButton("Exit");
         leaderboardButton = createButton("Leaderboard");
         submitButton = createButton("Submit");
+        leaderboard = new LeaderboardMenu(1);
 
         addButtonListeners();
 
@@ -74,6 +77,8 @@ public class EndGamePanel extends JPanel {
     
     private void addButtonListeners() {
         restartButton.addActionListener(e -> {
+            timer.resetTimer();
+            leaderboard.saveToJson();
             player.setCurrentQuestionIndex(0);
             player.setScore(0);
             player.setTimeSpent(0);
@@ -83,6 +88,7 @@ public class EndGamePanel extends JPanel {
             repaint();
         });
         exitButton.addActionListener(e -> {
+            leaderboard.saveToJson();
             System.exit(0);
         });
         leaderboardButton.addActionListener(e -> {
@@ -92,14 +98,26 @@ public class EndGamePanel extends JPanel {
             repaint();
         });
         submitButton.addActionListener(e -> {
+            if(submitted == true){
+                return;
+            }
+            if(nameField.getText().equals("Enter your name") 
+                || nameField.getText().equals("Saved score") 
+                || nameField.getText().equals("Invalid name")
+                ){
+
+                nameField.setText("Invalid name");
+                return;
+            }
+            submitted = true;
             player.setName(nameField.getText());
             leaderboard.addPlayer(player);
-            System.out.println("Name: " + player.getName() + " Score: " + player.getScore() + " Time: " + player.getTimeSpent() / 1000 + "s");
+            leaderboard.saveToJson();
+            System.out.println("Name: " + player.getName() + " Score: " + player.getScore() + " Time: " + player.getTimeSpent() + "s");
             nameField.setText("Saved score");
         });
 
     }
-
 
     private JButton createButton(String text) {
         JButton button = new JButton(text);
