@@ -7,9 +7,10 @@ import javax.swing.JPanel;
 
 public class DifficultyButtonsPanel extends JPanel{
     
-    DifficultyButtons buttons = new DifficultyButtons();
+    DifficultyButtons buttons;
 
     public DifficultyButtonsPanel(){
+        buttons = new DifficultyButtons();
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.NONE;

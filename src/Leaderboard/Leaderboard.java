@@ -12,34 +12,46 @@ import java.util.ArrayList;
 
 public class Leaderboard extends JPanel {
     
-    private ReadFromJson readFromJson = new ReadFromJson("data\\leaderboard.json", true);
+    private WriteToJson writeToJson = new WriteToJson("data/leaderboard.json");
+    private ReadFromJson readFromJson = new ReadFromJson("data/leaderboard.json", true);
     private ArrayList<Player> leaderboard;
-
+    private int playerCount = 1;
+    // private boolean alreadyAdded = false;
 
     Leaderboard(){
         this.leaderboard = readFromJson.getLeaderboard();
+        leaderboard.sort(new Cmp());
         setLayout(new GridLayout(0, 1));
         setSize(new Dimension(800, 400));
         setBorder(new LineBorder(java.awt.Color.BLACK, 2, true));
+        populateLeaderboard();
+    }
 
-        JLabel main_Label = new JLabel("TEST");
-        main_Label.setFont(new Font("Arial", Font.BOLD, 15));
-        main_Label.setSize(new Dimension(800, 50));
-        add(main_Label);
-        
-        for (Player player : leaderboard){
-            addPlayerLabel(player);
-        }      
+    public void addPlayer(Player player){
+        leaderboard.add(player);
+        leaderboard.sort(new Cmp());
+        writeToJson.write(leaderboard);
+        playerCount = 1;
+
+        populateLeaderboard();
     }
 
     private void addPlayerLabel(Player player){
-        String str = player.getName() + " " + player.getScore();
+        String str = playerCount+"." + player.getName() + " " + player.getTimeSpent();
         JLabel playerLabel = new JLabel(str);
         playerLabel.setBorder(new CompoundBorder(playerLabel.getBorder(), new EmptyBorder(5, 5, 5, 5)));
         playerLabel.setFont(new Font("Arial", Font.BOLD, 30));
         playerLabel.setHorizontalAlignment(JLabel.LEFT);
         playerLabel.setSize(new Dimension(800, 50));
         add(playerLabel);
+        playerCount++;
     }
 
+    private void populateLeaderboard(){
+        removeAll();
+        for (int i = 0; i < Math.min(leaderboard.size(), 10); i++) {
+            Player player = leaderboard.get(i);
+            addPlayerLabel(player);
+        }
+    }
 }

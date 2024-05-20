@@ -20,8 +20,12 @@ public class Player {
         this.score += 1;
     }
     
-    public int getScore() {
+    public double getScore() {
         return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
     
     public String getName() {
