@@ -53,8 +53,7 @@ public class LeaderboardMenu extends JPanel {
             });
         }
         else{
-            backButton.addBackButtonListener(e -> {
-                
+            backButton.addBackButtonListener(e -> {       
                 removeAll();
                 add(new EndGamePanel());
                 revalidate();
@@ -65,5 +64,8 @@ public class LeaderboardMenu extends JPanel {
 
     public void addPlayer(Player player){
         leaderboard.addPlayer(player);
+    }
+    public void saveToJson(){
+        leaderboard.saveToJson();
     }
 }

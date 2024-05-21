@@ -1,104 +1,32 @@
 [
   {
-    "name": "Jared",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 0.1
-  },
-  {
-    "name": "Jasmine",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 20.5
-  },
-  {
-    "name": "Jesse",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 30.1
-  },
-  {
-    "name": "Jill",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 40.0
-  },
-  {
-    "name": "Jerry",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 40.11
-  },
-  {
-    "name": "Jenny",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 50.555
-  },
-  {
-    "name": "Jack",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 60.23
-  },
-  {
-    "name": "Jim",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 72.2
-  },
-  {
-    "name": "Jane",
-    "score": 0,
-    "currentQuestionIndex": 0,
-    "timeSpent": 74.5
-  },
-  {
-    "name": "Submit",
-    "score": 7,
-    "currentQuestionIndex": 20,
-    "timeSpent": 123.951
-  },
-  {
-    "name": "Ka",
+    "name": "Voitke",
     "score": 5,
     "currentQuestionIndex": 20,
-    "timeSpent": 144.279
-  },
-  {
-    "name": "Lmao",
-    "score": 5,
-    "currentQuestionIndex": 20,
-    "timeSpent": 145.451
-  },
-  {
-    "name": "Enter your name",
-    "score": 5,
-    "currentQuestionIndex": 20,
-    "timeSpent": 145.451
+    "timeSpent": 143.865
   },
   {
     "name": "Voitke",
     "score": 5,
     "currentQuestionIndex": 20,
-    "timeSpent": 153.623
+    "timeSpent": 154.512
   },
   {
-    "name": "BLAHBLAH",
-    "score": 13,
+    "name": "Okay",
+    "score": 5,
     "currentQuestionIndex": 20,
-    "timeSpent": 264.609
+    "timeSpent": 154.626
   },
   {
-    "name": "BLAHBLAH",
-    "score": 13,
+    "name": "ok",
+    "score": 9,
     "currentQuestionIndex": 20,
-    "timeSpent": 264.609
+    "timeSpent": 254.814
   },
   {
     "name": "John",
-    "score": 0,
+    "score": 5,
     "currentQuestionIndex": 0,
-    "timeSpent": 414.15
+    "timeSpent": 454.1
   }
 ]
