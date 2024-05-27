@@ -95,9 +95,48 @@
         "answer": "Bogotá"
     },
     {
+        "question": "What is the capital of China?",
+        "options": ["Beijing", "Shanghai", "Guangzhou", "Shenzhen"],
+        "answer": "Beijing"
+    },
+    {
         "question": "What is the capital of Saudi Arabia?",
         "options": ["Jeddah", "Mecca", "Medina", "Riyadh"],
         "answer": "Riyadh"
+    },
+    {
+        "question": "What is the capital of Andorra?",
+        "options": ["Andorra la Vella", "Escaldes-Engordany", "Encamp", "La Massana"],
+        "answer": "Andorra la Vella"
+    },
+    {
+        "question": "What is the capital of Thailand?",
+        "options": ["Bangkok", "Phuket", "Chiang Mai", "Pattaya"],
+        "answer": "Bangkok"
+    },
+    {
+        "question": "What is the capital of Kazakhstan?",
+        "options": ["Karaganda", "Almaty", "Shymkent", "Astana"],
+        "answer": "Astana"
+    },
+    {
+        "question": "What is the capital of Lesotho?",
+        "options": ["Leribe", "Teyateyaneng", "Maseru", "Mokhotlong"],
+        "answer": "Maseru"
+    },
+    {
+        "question": "What is the capital of Mauritania?",
+        "options": ["Kaédi", "Nouadhibou", "Nouakchott", "Rosso"],
+        "answer": "Nouakchott"
+    },
+    {
+        "question": "What is the capital of Seychelles?",
+        "options": ["Beau Vallon", "Victoria", "Anse Royale", "Bel Ombre"],
+        "answer": "Victoria"
+    },
+    {
+        "question": "What is the capital of Equatorial Guinea?",
+        "options": ["Malabo", "Bata", "Ebebiyin", "Mongomo"],
+        "answer": "Malabo"
     }
-
 ]

@@ -85,6 +85,11 @@
         "answer": "Copenhagen"
     },
     {
+        "question": "What is the capital of Guyana?",
+        "options": ["Linden", "Georgetown", "New Amsterdam", "Bartica"],
+        "answer": "Georgetown"
+    },
+    {
         "question": "What is the capital of Israel?",
         "options": ["Tel Aviv", "Jerusalem", "Haifa", "Beersheba"],
         "answer": "Jerusalem"
@@ -98,5 +103,30 @@
         "question": "What is the capital of Turkey?",
         "options": ["Istanbul", "Ankara", "Izmir", "Antalya"],
         "answer": "Ankara"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
+        "answer": "Brasília"
+    },
+    {
+        "question": "What is the capital of Argentina?",
+        "options": ["Buenos Aires", "Córdoba", "Rosario", "Mendoza"],
+        "answer": "Buenos Aires"
+    },
+    {
+        "question": "What is the capital of Eritrea?",
+        "options": ["Assab", "Keren", "Massawa", "Asmara"],
+        "answer": "Asmara"
+    },
+    {
+        "question": "What is the capital of Montenegro?",
+        "options": ["Podgorica", "Nikšić", "Herceg Novi", "Bar"],
+        "answer": "Podgorica"
+    },
+    {
+        "question": "What is the capital of Iceland?",
+        "options": ["Selfoss", "Keflavik", "Akureyri", "Reykjavik"],
+        "answer": "Reykjavik"
     }
 ]
