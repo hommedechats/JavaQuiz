@@ -46,10 +46,10 @@ class QuizGamePanel extends JPanel {
                 player.updateCurrentQuestionIndex();
 
                 if(player.getCurrentQuestionIndex() >= QUESTION_COUNT){
-                    System.out.println(player.getCurrentQuestionIndex());
+                    // System.out.println(player.getCurrentQuestionIndex());
                     timer.endTimer();
                     player.setTimeSpent(timer.getElapsedTimeMs() / 1000);
-                    System.out.println(player.getTimeSpent());
+                    // System.out.println(player.getTimeSpent());
                     getParent().add(new EndGamePanel());
 
                 }

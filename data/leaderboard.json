@@ -1,5 +1,11 @@
 [
   {
+    "name": "Voitke",
+    "score": 8,
+    "currentQuestionIndex": 20,
+    "timeSpent": 123.961
+  },
+  {
     "name": "AAAA",
     "score": 5,
     "currentQuestionIndex": 20,
@@ -16,6 +22,12 @@
     "score": 5,
     "currentQuestionIndex": 20,
     "timeSpent": 153.779
+  },
+  {
+    "name": "Voitkee",
+    "score": 5,
+    "currentQuestionIndex": 20,
+    "timeSpent": 153.792
   },
   {
     "name": "Voitke",
