@@ -19,17 +19,8 @@ public class QuizGame{
         player.setName("opa");
         ReadFromJson readFromJson = new ReadFromJson(filename);
         questions = readFromJson.getQuestions();
-        // printAllQuestions();
     }
 
-    // private void printAllQuestions() {
-    //     for (Question q : questions) {
-    //         System.out.println(q.getQuestion());
-    //         System.out.println(q.getAnswer());
-    //         System.out.println(q.getOptions());
-    //     }
-    // }
-    
     public JPanel questionPanels(){
         JPanel cards = new JPanel(new CardLayout());
         for (int i = 0; i < QUESTION_COUNT; i++) {
@@ -45,9 +36,9 @@ public class QuizGame{
         }
         visitedQuestions.add(questionIndex);        
         Question q = questions.get(questionIndex);
-        System.out.println(q.getQuestion()
-                + " " + q.getOptions()
-                + " " + q.getAnswer());
+        // System.out.println(q.getQuestion()
+        //         + " " + q.getOptions()
+        //         + " " + q.getAnswer());
         return new QuizGamePanel(q.getQuestion(), q.getOptions(), q.getAnswer());
 
     }

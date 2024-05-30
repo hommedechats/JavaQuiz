@@ -35,7 +35,7 @@ public class Leaderboard extends JPanel {
     }
 
     public void saveToJson(){
-        System.out.println("Saving leaderboard to json");
+        // System.out.println("Saving leaderboard to json");
         leaderboard.sort(new Cmp());
         writeToJson.write(leaderboard, Math.max(leaderboard.size(), 10));
     }

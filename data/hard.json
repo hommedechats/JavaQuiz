@@ -98,7 +98,30 @@
         "question": "What is the capital of Kyrgyzstan?",
         "options": ["Osh", "Jalal-Abad", "Bishkek", "Karakol"],
         "answer": "Bishkek"
+    },
+    {
+        "question": "What is the capital of Afghanistan?",
+        "options": ["Kabul", "Kandahar", "Herat", "Mazar-i-Sharif"],
+        "answer": "Kabul"
+    },
+    {
+        "question": "What is the capital of Belize?",
+        "options": ["Belmopan", "San Ignacio", "Orange Walk", "Belize City"],
+        "answer": "Belmopan"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": ["Nairobi", "Mombasa", "Kisumu", "Nakuru"],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "What is the capital of Vanuatu?",
+        "options": ["Luganville", "Port Vila", "Norsup", "Isangel"],
+        "answer": "Port Vila"
+    },
+    {
+        "question": "What is the capital of Tuvalu?",
+        "options": ["Niutao", "Nanumanga", "Funafuti", "Vaitupu"],
+        "answer": "Funafuti"
     }
-
-
 ]

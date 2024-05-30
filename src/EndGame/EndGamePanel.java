@@ -21,7 +21,7 @@ public class EndGamePanel extends JPanel {
     private JButton submitButton;
     private LeaderboardMenu leaderboard;
     private Timer timer;
-    private boolean submitted = false; // can submit multiple times Idk how to fix FIXME
+    private boolean submitted = false;
 
     public EndGamePanel() {
 
@@ -113,7 +113,7 @@ public class EndGamePanel extends JPanel {
             player.setName(nameField.getText());
             leaderboard.addPlayer(player);
             leaderboard.saveToJson();
-            System.out.println("Name: " + player.getName() + " Score: " + player.getScore() + " Time: " + player.getTimeSpent() + "s");
+            // System.out.println("Name: " + player.getName() + " Score: " + player.getScore() + " Time: " + player.getTimeSpent() + "s");
             nameField.setText("Saved score");
         });
 
